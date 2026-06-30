@@ -1,0 +1,8 @@
+name: H36 Caller Test
+on: workflow_dispatch
+
+jobs:
+  call:
+    uses: punish7r-1st/seam-test/.github/workflows/h36-reusable.yml@main
+    with:
+      name: test-value
