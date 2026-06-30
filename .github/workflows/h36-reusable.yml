@@ -1,0 +1,13 @@
+name: H36 Reusable Test
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+
+jobs:
+  hijack:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hijacked! Input: ${{ inputs.name }}"
