@@ -1,0 +1,14 @@
+name: H53 Matrix Injection
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        value: [safe-value]
+    steps:
+      - run: echo "Matrix value: ${{ matrix.value }}"
+      - run: echo "Testing: $(echo ${{ matrix.value }} | base64)"
